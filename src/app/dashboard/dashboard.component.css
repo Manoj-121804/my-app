@@ -1,16 +1,36 @@
+
 .parent{
     width: 100vw;
     height: 100vh;
     background-color: blue;
     display: flex;
+    
 }
 .left{
     width: 20%;
     height: 100%;
-    background-color: purple;
+    background-color: rgba(17, 6, 6, 0.932);
+    color:white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: space-between;
+    
+}
+.left h3{
+    margin-left: 10%;
 }
 .right{
     width: 80%;
     height: 100%;
-    background-color: coral;
+    background-color: white;
+}
+#logout{
+    height: 5%;
+    width: 90%;
+    background-color: orangered;
+    border-radius: 5%;
+    border: none;
+    margin-bottom: 2%;
+    margin-left: 4%;
 }

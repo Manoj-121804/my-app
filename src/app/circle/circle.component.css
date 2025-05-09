@@ -1,0 +1,53 @@
+.circle-parent{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.circle{
+    height: 50%;
+    width: 30%;
+    box-shadow: 5px 5px 5px 5px ;
+    /* border: 1px solid; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+}
+#value_1{
+    border-top: 0;
+    height: 10%;
+    width: 80%;
+    border: 1px solid ;
+}
+.button{
+    height: 25%;
+    width: 80%; 
+}
+
+ .area{
+    height: 35%;
+    width:90%; 
+    background-color:  rgba(7, 7, 238, 0.301);
+    color: white;
+    margin-left: 3%;
+    border: none;
+ }
+ .perimeter{
+    height: 35%;
+    width:90%;
+    background-color:  rgba(7, 7, 238, 0.301);
+    color: white;
+    margin-left: 3%;
+    border: none;
+ }
+ .area:hover{
+    background-color: blue;
+}
+.perimeter:hover{
+    background-color: blue;
+}
+
