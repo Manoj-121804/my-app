@@ -17,6 +17,10 @@
     justify-content: space-between;
     
 }
+#head{
+    margin-left: 5%; 
+    margin-top: 5%;  
+}
 .left h3{
     margin-left: 10%;
 }

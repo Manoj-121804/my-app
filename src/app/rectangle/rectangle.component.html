@@ -1,14 +1,14 @@
 <div class="rectangle-parent">
     <div class="rectangle">
 <label for="value_1" > Length : </label>
-<input type="number" name="" id="value_1">
+<input type="number" name="" id="value_1" [(ngModel)]="length">
 <label for="value_2" > Breadth : </label>
-<input type="number" name="" id="value_2">
+<input type="number" name="" id="value_2"[(ngModel)]="breadth">
 <div class="button">
-<button class="  area">Area</button><br><br>
-<button class=" perimeter">perimeter</button>
+<button (click)="area()" [disabled]="(length==0) || (breadth==0)" class="  area">Area</button><br><br>
+<button (click)="perimeter()" [disabled]="(length==0) || (breadth==0)" class=" perimeter">perimeter</button>
 
 </div>
-<h3 id="sol">Result is :</h3>
+<h3 id="sol">Result is :{{result}}</h3>
 </div>
 

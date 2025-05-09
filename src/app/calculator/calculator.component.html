@@ -5,16 +5,16 @@
 <div class="calci-parent">
     <div class="calculator">
 <label for="value_1" > Number 1 : </label>
-<input type="number" name="" id="value_1">
+<input type="number" name="" id="value_1" [(ngModel)]="number_1">
 <label for="value_2" > Number 2 : </label>
-<input type="number" name="" id="value_2">
+<input type="number" name="" id="value_2" [(ngModel)]="number_2">
 <div class="button">
-<button class=" btn sum-btn">sum</button>
-<button class="btn sub-btn">sub</button>
-<button class="btn mul-btn" >mul</button>
-<button class="btn div-btn">div</button>
+<button (click)="sum()" [disabled]="(number_1==0) || (number_2==0)" class=" btn sum-btn">sum</button>
+<button (click)="sub()" class="btn sub-btn">sub</button>
+<button (click)="mul()" class="btn mul-btn" >mul</button>
+<button (click)="div()" class="btn div-btn">div</button>
 </div>
-<h3 id="sol">Result is :</h3>
+<h3 id="sol">Result is : {{result}}</h3>
 </div>
 
 

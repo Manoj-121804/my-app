@@ -10,6 +10,7 @@ import { BMIComponent } from './bmi/bmi.component';
 import { CircleComponent } from './circle/circle.component';
 import { RectangleComponent } from './rectangle/rectangle.component';
 import { CalculatorComponent } from './calculator/calculator.component';
+import { DirectivesComponent } from './directives/directives.component';
 
 const routes: Routes = [
   {path:'',component:LoginComponent},
@@ -17,7 +18,7 @@ const routes: Routes = [
   {path:'dashboard',component:DashboardComponent,children:[{path:'home',component:HomeComponent},
     {path:'welcome',component:WelcomeComponent}, {path:'data-binding',component:DataBindingComponent},
     {path:'calculator',component:CalculatorComponent},{path:'rectangle',component:RectangleComponent},
-    {path:'circle',component:CircleComponent},{path:'bmi',component:BMIComponent},]},
+    {path:'circle',component:CircleComponent},{path:'bmi',component:BMIComponent},{path:'directives',component:DirectivesComponent}]},
   {path:'**',component:ErrorComponent},
 ];
 

@@ -1,13 +1,13 @@
 <div class="bmi-parent">
     <div class="bmi">
         <label> Height : </label> 
-<input type="number" name="" id="height"> 
+<input type="number" name="" id="height" [(ngModel)]="height"> 
 <label> Weight : </label> 
-<input type="number" name="" id="weight"> 
+<input type="number" name="" id="weight" [(ngModel)]="weight"> 
 
-<button class="button">caluclate</button>
+<button (click)="bmi()" [disabled]="(height==0) || (weight==0)" class="button">caluclate</button>
 
-<h3>Your BMI is :</h3>
+<h3>Your BMI is :{{result}}</h3>
 
 
 
