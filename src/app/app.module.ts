@@ -15,6 +15,14 @@ import { CircleComponent } from './circle/circle.component';
 import { BMIComponent } from './bmi/bmi.component';
 import { FormsModule } from '@angular/forms';
 import { DirectivesComponent } from './directives/directives.component';
+import { EmployeeComponent } from './employee/employee.component';
+import { VehiclesComponent } from './vehicles/vehicles.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FlipkartComponent } from './flipkart/flipkart.component';
+import { MailComponent } from './mail/mail.component';
+import { WeatherappComponent } from './weatherapp/weatherapp.component';
+import { PininterestComponent } from './pininterest/pininterest.component';
+
 
 @NgModule({
   declarations: [
@@ -29,12 +37,19 @@ import { DirectivesComponent } from './directives/directives.component';
     RectangleComponent,
     CircleComponent,
     BMIComponent,
-    DirectivesComponent
+    DirectivesComponent,
+    EmployeeComponent,
+    VehiclesComponent,
+    FlipkartComponent,
+    MailComponent,
+    WeatherappComponent,
+    PininterestComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

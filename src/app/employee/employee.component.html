@@ -1,0 +1,117 @@
+
+<!-- <button (click)="packageHighToLow()" class="btn btn-primary">package: High to Low</button>
+
+<select [(ngModel)]="role" (change)="roleFilter()">
+
+<option value="UIDeveloper">UI Developer</option>
+<option value="Software Developer">Software Developer</option>
+<option value="Data engineer">Data engineer</option>
+<option value="Testing Engineer">Testing engineer</option>
+</select>
+
+<input type="text" placeholder="Enter text to search" [(ngModel)]="term" (keyup)="search()">
+
+  <table class="table table-dark">
+    <thead>
+      <tr>
+         <th>S.no</th>
+          <th>Employee Name</th>
+          <th>Employee Experience</th>
+          <th>Employee package</th>
+          <th>Employee Role</th>
+          <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr  *ngFor="let employee of employees; let i=index">
+            <td>{{i+1}}</td>
+            <td>{{employee.name}}</td>
+            <td>{{employee.experience}}</td>
+            <td>{{employee.package}}</td>
+            <td>{{employee.role}}</td>
+            <td><button class="btn btn-danger" (click)="delete(i)">Delete</button></td>
+        </tr>
+      </tbody>
+    </table> -->
+
+
+      <!-- parent div -->
+    <div class=" parent-container-fluid">
+
+       <!-- Flipcart child div  -->
+
+      <div class="child-1-container-fluid">
+         <h3>Flipkart</h3>
+      </div>
+       <!-- buttons child div -->
+      <div class="child-2-container-fluid">
+         <!-- buttons child right div -->
+        <div class="child-2-r-container-fluid">
+
+        <input type="text" placeholder="search"  [(ngModel)]="term" (keyup)="search()" >
+        <button (click)="  roleFilter()" class="btn btn-lg btn-primary m-2 btn-sm" >Only Free Delivery</button>
+        <div >
+          <button (click)="priceLowToHigh()"  class="btn btn-warning m-1 btn-sm">Price Low To High</button>
+          <button (click)="priceHighToLow()" class="btn btn-warning m-1 btn-sm">Price High To Low</button>
+          <button  (click)="ratingLowToHigh()" class="btn btn-warning m-1 btn-sm">Rating Low To High</button>
+          <button  (click)="ratingHighToLow()" class="btn btn-warning m-1 btn-sm">Rating High To Low</button>
+
+        </div>
+        <div>
+          <button (click)="Discount()" class="btn btn-info m-1 btn-sm">Apply 50% Discount</button>
+          <button (click)="priceWithDelivery()" class="btn btn-info m-1 btn-sm">Price With Delivery Charges</button>
+        </div>
+          <div>
+          <button  (click)=" totPrice()" class="btn btn-secondary m-1 btn-sm">Total Price</button>
+          <button (click)="totCartItems()" class= "btn btn-secondary m-1 btn-sm">Total Cart Items</button>
+        </div> 
+        </div>
+        <!-- buttons child left div -->
+         <div class="child-2-le-container-fluid" >
+
+          <label >Name: </label>
+           <input class="input-1" type="text" [(ngModel)]="name"><br>
+           <label >Price: </label>
+           <input  class="input-1"  type="text"  [(ngModel)]="price" ><br>
+           <label >Rating: </label>
+           <input  class="input-1"  type="text"  [(ngModel)]="rating" ><br>
+           <label >Free Delivery: </label>
+           <input type="radio" name="yes" [value]= 'true'  [(ngModel)]="FDyes" >
+           <label class="input-2" for="html">Yes</label>
+           <input type="radio"  name="yes" [value]= 'false'  [(ngModel)]="FDyes">
+           <label class="input-2" for="css" >No</label><br>
+           <button (click)=" addTOCart()" class="btn btn-success btn-sm">Add To Cart</button>
+
+         </div>
+        </div>
+
+        <div class="child-3-container-fluid">
+            <table class="table table-striped" >
+    <thead>
+      <tr>
+          <th class="th">S.no</th>
+          <th class="th">Product Name</th>
+          <th class="th">Price</th>
+          <th class="th">Rating</th>
+          <th class="th">Free Delivery</th>
+          <th class="th">Actions</th>
+      </tr>
+    </thead>
+     <tbody>
+        <tr  *ngFor="let prodcuct of products; let i=index">
+            <td>{{i+1}}</td>
+            <td>{{prodcuct.name}}</td>
+            <td>{{prodcuct.price}}</td>
+            <td>{{prodcuct.rating}}</td>
+            <td>{{prodcuct.freeDelivery}}</td>
+            <td><button class="btn btn-danger" (click)="delete(i)">Delete</button></td>
+        </tr>
+      </tbody>
+    </table> 
+
+        </div>
+        
+      
+    </div> 
+
+

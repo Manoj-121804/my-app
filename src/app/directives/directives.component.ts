@@ -21,4 +21,7 @@ export class DirectivesComponent {
     {name:'bike',price:2000000,rating:3.9}
 
   ]
+
+today:any = new Date();
+
 }

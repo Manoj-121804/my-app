@@ -11,6 +11,12 @@ import { CircleComponent } from './circle/circle.component';
 import { RectangleComponent } from './rectangle/rectangle.component';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { DirectivesComponent } from './directives/directives.component';
+import { EmployeeComponent } from './employee/employee.component';
+import { VehiclesComponent } from './vehicles/vehicles.component';
+import { FlipkartComponent } from './flipkart/flipkart.component';
+import { MailComponent } from './mail/mail.component';
+import { WeatherappComponent } from './weatherapp/weatherapp.component';
+import { PininterestComponent } from './pininterest/pininterest.component';
 
 const routes: Routes = [
   {path:'',component:LoginComponent},
@@ -18,7 +24,12 @@ const routes: Routes = [
   {path:'dashboard',component:DashboardComponent,children:[{path:'home',component:HomeComponent},
     {path:'welcome',component:WelcomeComponent}, {path:'data-binding',component:DataBindingComponent},
     {path:'calculator',component:CalculatorComponent},{path:'rectangle',component:RectangleComponent},
-    {path:'circle',component:CircleComponent},{path:'bmi',component:BMIComponent},{path:'directives',component:DirectivesComponent}]},
+    {path:'circle',component:CircleComponent},{path:'bmi',component:BMIComponent}
+    ,{path:'directives',component:DirectivesComponent},
+    {path:'employee',component:EmployeeComponent},{path:'vehicles',component:VehiclesComponent},
+    {path:'flipkart',component:FlipkartComponent},{path:'mail',component:MailComponent},
+    {path:'weatherapp',component:WeatherappComponent}, {path:'pininterest',component:PininterestComponent}
+  ]},
   {path:'**',component:ErrorComponent},
 ];
 

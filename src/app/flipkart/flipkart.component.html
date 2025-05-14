@@ -1,0 +1,34 @@
+
+ <div class="parent">
+<div class=" card " style="width: 18rem; height: 300px;"  *ngFor="let card of flipkart">
+  <img src={{card.image}} class="card-img-top" alt="image">
+
+  <div class="card-body" style="height: 25px;" >
+     <h6 class="card-title">{{card.title}}</h6>
+    <!-- <p class="card-text">{{card.description}}</p> -->
+     <h6 class="category">Category: {{card.category}}</h6>
+      <h6 class="price">Price: {{card.price}}</h6>
+       <span class="rating">*{{card.rating.rate}}/5</span>
+ 
+  </div>
+</div>
+</div> 
+
+
+<!-- <div class="parent">
+<div  *ngFor="let card of flipkart" class="card">
+  <div class="col ">
+    <div class="card h-100">
+      <img src="{{card.image}}" class="card-img-top " alt="image">
+      <div class="card-body">
+        <h5 class="card-title">{{card.title}}</h5>
+        <p class="card-text">*{{card.description}}</p>
+      <h5 class="category">Category: {{card.category}}</h5>
+      <h5 class="price">Price: {{card.price}}</h5>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Rating:{{card.rating.rate}}/5</small>
+      </div>
+    </div> 
+   </div>
+  </div> -->

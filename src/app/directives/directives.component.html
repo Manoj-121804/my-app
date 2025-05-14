@@ -12,7 +12,7 @@
     <option *ngFor="let state of states">{{state}}</option>
 </select>
 
-<table border="2px solid black">
+<!-- <table border="2px solid black">
   <thead>
     <tr>
         <th>Product Name</th>
@@ -48,4 +48,12 @@
       </tr>
     </tbody>
   </table>
+ -->
+
+ <H4>{{today}}</H4>
+ <H4>{{today |date}}  </H4>
+ <H4>{{today |date: 'dd-MM-yyyy'}}   </H4>
+ <H4>{{today |date: 'yyyy-MM-dd' }}  </H4>
+ <H4>{{today |date: 'hh-mm'}}    </H4>
+ <H4>{{today |date: 'hh-mm-ss'}}   </H4>
 

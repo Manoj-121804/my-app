@@ -1,0 +1,10 @@
+ .grey{
+    
+    color: gray
+} 
+.black{
+    color: black;
+}
+ :hover{
+    color: orangered;
+}

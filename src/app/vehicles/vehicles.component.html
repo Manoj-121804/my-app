@@ -1,0 +1,38 @@
+ 
+ <table class="table table-striped">
+ <thead>
+      <tr>
+          <th class="th">S.no</th>
+          <th class="th">vehicle</th>
+          <th class="th">Color</th>
+          <th class="th">Cost</th>
+          <th class="th">Fuel</th>
+          <th class="th">Id</th>
+          <th class="th">Image</th>
+          <th class="th">Manufacturer</th>
+          <th class="th">Model</th>
+          <th class="th">Type</th>
+          <th class="th">Tyres</th>
+          
+          
+
+      </tr>
+    </thead>
+     <tbody>
+        <tr  *ngFor="let vehicle of vehicles; let i=index">
+            <td>{{i+1}}</td>
+            <td>{{vehicle.Vehicle}}</td>
+            <td>{{vehicle.color}}</td>
+            <td>{{vehicle.cost}}</td>
+            <td>{{vehicle.fuel}}</td>
+            <td>{{vehicle.id}}</td>
+            <td>{{vehicle.image}}</td>
+            <td>{{vehicle.manufacturer}}</td>
+            <td>{{vehicle.model}}</td>
+            <td>{{vehicle.type}}</td>
+            <td>{{vehicle.tyres}}</td>
+            
+        </tr>
+      </tbody>
+    </table> 
+

@@ -1,0 +1,49 @@
+.parent{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sun{
+    height: 100px;
+    width: 100px;
+    /* background-color: yellow; */
+    border-radius: 50%;
+    margin-top: 4%;
+    margin-bottom: 3%;
+    
+}
+
+#winddirection{
+    margin-bottom: 4%;
+}
+#heading{
+    margin-top: 4%;
+}
+.degree{
+     margin-bottom:4% ;
+}
+.blue{
+    background-color: blue;
+}
+.yellow{
+    background-color: yellow;
+}
+.green{
+    background-color: green;
+}
+.red{
+    background-color: red;
+}
+.day{
+    color: skyblue;
+}
+.night{
+    color: grey;
+}
+
+

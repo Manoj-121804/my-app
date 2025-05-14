@@ -1,0 +1,9 @@
+<div class="parent">
+  <div class="card" *ngFor="let card of pininterest">
+    <img src=[card.url] class="card-img" alt="image" />
+    <div class="card-img-overlay">
+      <h5 class="author">Author:{{ card.author }}</h5>
+      <a class="btn btn-primary">Download</a>
+    </div>
+  </div>
+</div>

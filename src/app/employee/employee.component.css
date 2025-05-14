@@ -1,0 +1,67 @@
+.parent-container-fluid{
+    height: 100vh;
+    background-color:rgb(226, 231, 231);
+    overflow: auto;
+}
+.child-1-container-fluid{
+    text-align: center;
+    height: 5%;
+    background-color:rgb(1, 130, 130);
+    font: size 2px;
+    color: white;
+}
+.child-2-container-fluid{
+    /* height: 30%; */
+    background-color:rgb(1, 130, 130);
+    display: flex;
+}
+/* .btn-g {
+    @mixin button-size( $font-size) {
+  @include font-size($font-size );
+  font-size: 0.5 rem;
+}
+} */
+.child-2-r-container-fluid{
+width: 60%;
+height: 100%;
+
+}
+.child-2-le-container-fluid{
+width: 40%;
+height: 100%;
+
+
+}
+.input-1{
+    height: 12%;
+    width: 50%;
+    margin: 1%;
+    
+    
+}
+.input-2{
+    margin: 2.5%;
+    
+}
+label{
+    margin: 2%;
+    margin-bottom: 1%;
+    margin-left: 0;
+    color: white;
+}
+.child-3-container-fluid{
+    height: 65%;
+    background-color:rgb(226, 231, 231);
+}
+.th{
+    background-color: #4baf4f;
+    color: white;
+     border-color: rgb(226, 231, 231);
+}
+table{
+    border-collapse:separate;
+    border-color: rgb(226, 231, 231);
+   
+}
+
+

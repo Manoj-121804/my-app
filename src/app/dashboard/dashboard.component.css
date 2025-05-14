@@ -9,7 +9,8 @@
 .left{
     width: 20%;
     height: 100%;
-    background-color: rgba(17, 6, 6, 0.932);
+    overflow: auto;
+    background-color:#2f4f4f;
     color:white;
     display: flex;
     flex-direction: column;
@@ -28,6 +29,7 @@
     width: 80%;
     height: 100%;
     background-color: white;
+    overflow: auto;
 }
 #logout{
     height: 5%;
