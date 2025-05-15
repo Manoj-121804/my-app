@@ -17,6 +17,8 @@ import { FlipkartComponent } from './flipkart/flipkart.component';
 import { MailComponent } from './mail/mail.component';
 import { WeatherappComponent } from './weatherapp/weatherapp.component';
 import { PininterestComponent } from './pininterest/pininterest.component';
+import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
+import { StudentComponent } from './student/student.component';
 
 const routes: Routes = [
   {path:'',component:LoginComponent},
@@ -28,7 +30,8 @@ const routes: Routes = [
     ,{path:'directives',component:DirectivesComponent},
     {path:'employee',component:EmployeeComponent},{path:'vehicles',component:VehiclesComponent},
     {path:'flipkart',component:FlipkartComponent},{path:'mail',component:MailComponent},
-    {path:'weatherapp',component:WeatherappComponent}, {path:'pininterest',component:PininterestComponent}
+    {path:'weatherapp',component:WeatherappComponent}, {path:'pininterest',component:PininterestComponent},
+    {path:'create-vehicle',component:CreateVehicleComponent},{path:'student',component:StudentComponent},
   ]},
   {path:'**',component:ErrorComponent},
 ];

@@ -1,5 +1,40 @@
  
- <table class="table table-striped">
+ <input type="text" placeholder="enter to search" [(ngModel)]="keywords" (keyup)="search()"><br>
+
+ <select [(ngModel)]="column">
+  <option value="Vehicle">Vehicle Name</option>
+   <option value="color">Color</option>
+    <option value="cost">Cost</option>
+     <option value="fuel">Fuel</option>
+ </select>
+
+ <select [(ngModel)]="order">
+       <option value="asc">Ascending order</option>
+        <option value="desc">Descending order</option>
+ </select>
+ <button (click)="sort()">sort</button><br>
+
+  <select [(ngModel)]="limit">
+  <option value="10">10</option>
+   <option value="20">20</option>
+    <option value="30">30</option>
+     <option value="40">40</option>
+      <option value="50">50</option>
+
+ </select>
+
+ <select [(ngModel)]="page">
+       <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+ </select>
+
+ <button (click)="pagination()">paginate</button>
+  <button class="btn btn-primary" routerLink="/dashboard/create-vehicle">create</button>
+ 
+ <table class="table table-striped ">
  <thead>
       <tr>
           <th class="th">S.no</th>
@@ -13,6 +48,7 @@
           <th class="th">Model</th>
           <th class="th">Type</th>
           <th class="th">Tyres</th>
+          <th class="th">Actions</th>
           
           
 
@@ -31,6 +67,7 @@
             <td>{{vehicle.model}}</td>
             <td>{{vehicle.type}}</td>
             <td>{{vehicle.tyres}}</td>
+             <td><button class="btn btn-danger" (click)="delete(vehicle.id)">Delete</button></td>
             
         </tr>
       </tbody>

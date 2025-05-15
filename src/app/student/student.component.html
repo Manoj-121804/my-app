@@ -1,0 +1,76 @@
+<div class="parent">
+  <div class="top-bar">
+    <input type="text" placeholder="Search Student"  [(ngModel)]="keywords" (keyup)="search()">
+
+    <label > Sort-Column</label>
+
+    <select  [(ngModel)]="column">
+      <option value="name">Name</option>
+      <option value="phone">Phone</option>
+      <option value="city">City</option> 
+      <option value="dob">D.O.B</option>
+      <option value="email">E-mail</option>
+    </select>
+
+   <label>Sort-Order</label>
+
+    <select [(ngModel)]="order">
+      <option value="asc">Ascending order</option>
+      <option value="desc">Descending order</option>
+    </select>
+
+    <button (click)="sort()" class="btn btn-primary">Sort</button>
+
+     <label>Limit</label>
+    <select [(ngModel)]="limit">
+      <option value="5">5</option>
+      <option value="10">10</option>
+    </select>
+
+    <label>Page</label>
+    <select  [(ngModel)]="page">
+      <option value="1">1</option>
+      <option value="2">2</option>
+    </select>
+     
+    <button (click)="pagination()" class="btn btn-primary">Page</button>
+    <button class="btn btn-primary" routerLink="/dashboard/" >Create</button>
+
+  </div>
+
+  <div class="card " *ngFor="let card of student">
+    <div class="header">
+        <div class="left_header"> <img class="logo" src={{card.school_logo}} alt=""></div>
+        <div class="right_header"> <h3 id="scname">{{card.school_name}}</h3>
+       
+        </div>
+     
+    </div>
+    <div class="body">
+     <div class="left_body">
+       <h5>Name: {{card.name}} </h5>
+       <h5>Phone: {{card.phone}} </h5>
+       <h5>City:  {{card.city}}  </h5>
+       <h5>DOB:  {{card.dob}} </h5>
+       <h5 id="email">E-mail: {{card.email}} </h5>
+
+     </div>
+     <div class="right_body"><img class="profile_pic" src="{{card.profile_picture}}" alt="profile-pic"></div>
+
+    </div>
+    <div class="footer" >
+     <div class="footer_top">
+     <h6 class="sc_city">School_city:   {{card.school_city}}</h6> 
+       <h6 class="sc_city">   School_pin:  {{card.school_pin}}</h6>
+       </div>
+       <div class="footer_bottom">
+        <button id="view">View</button>
+        <button id="edit" >Edit</button>
+        <button id="delete">Delete</button>
+       </div>
+    </div>
+
+  
+
+</div>
+</div>

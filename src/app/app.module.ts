@@ -13,7 +13,7 @@ import { CalculatorComponent } from './calculator/calculator.component';
 import { RectangleComponent } from './rectangle/rectangle.component';
 import { CircleComponent } from './circle/circle.component';
 import { BMIComponent } from './bmi/bmi.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DirectivesComponent } from './directives/directives.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { VehiclesComponent } from './vehicles/vehicles.component';
@@ -22,6 +22,8 @@ import { FlipkartComponent } from './flipkart/flipkart.component';
 import { MailComponent } from './mail/mail.component';
 import { WeatherappComponent } from './weatherapp/weatherapp.component';
 import { PininterestComponent } from './pininterest/pininterest.component';
+import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
+import { StudentComponent } from './student/student.component';
 
 
 @NgModule({
@@ -43,13 +45,16 @@ import { PininterestComponent } from './pininterest/pininterest.component';
     FlipkartComponent,
     MailComponent,
     WeatherappComponent,
-    PininterestComponent
+    PininterestComponent,
+    CreateVehicleComponent,
+    StudentComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

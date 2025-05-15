@@ -18,8 +18,10 @@ export class PininterestComponent {
       },(err:any)=>{
         alert("Internal Server Error!")
   
-  
         })
-  
+      }
+        download:any;
+      downloadimg(){
+        this.download=("")
       }
 }
