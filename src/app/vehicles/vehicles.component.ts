@@ -60,7 +60,7 @@ loadvehicles(){
     delete(id:number){
       if(confirm("Are you sure to delete?")==true){
          this._vehicleService.deletevehicle(id).subscribe((data:any)=>{
-     alert("record dleted successfully");
+     alert("record deleted successfully");
        this.loadvehicles();
     },(err:any)=>{
       alert("Internal Server Error!")

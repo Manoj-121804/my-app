@@ -34,7 +34,8 @@
     </select>
      
     <button (click)="pagination()" class="btn btn-primary">Page</button>
-    <button class="btn btn-primary" routerLink="/dashboard/" >Create</button>
+    
+    <button class="btn btn-warning" routerLink="/dashboard/createstudent" >Create</button>
 
   </div>
 
@@ -64,9 +65,9 @@
        <h6 class="sc_city">   School_pin:  {{card.school_pin}}</h6>
        </div>
        <div class="footer_bottom">
-        <button id="view">View</button>
-        <button id="edit" >Edit</button>
-        <button id="delete">Delete</button>
+        <button id="view" routerLink="/dashboard/student-details/{{card.id}}">View</button>
+        <button id="edit" routerLink="/dashboard/edit-student/{{card.id}}">Edit</button>
+        <button id="delete" (click)="delete(card.id)">Delete</button>
        </div>
     </div>
 

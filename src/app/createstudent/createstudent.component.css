@@ -1,0 +1,24 @@
+.parent{
+
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background-color: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.create-student{
+    height: 70%;
+    width: 35%;
+    background-color:orange;
+    align-content: center;
+    
+}
+
+.btn{
+    margin-left: 30%;
+}
+.content{
+    margin-left: 10%;
+}

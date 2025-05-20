@@ -10,15 +10,20 @@ export class StudentComponent {
 
    student:any=[];
     constructor(private _studentid:StudentService){
-  
-        _studentid.getStudents().subscribe((data:any)=>{
+      this.loadStudents();
+      
+    }
+    
+     loadStudents(){
+
+        this._studentid.getStudents().subscribe((data:any)=>{
           console.log(data);
         this.student=data;
         console.log(this.student);
       },(err:any)=>{
         alert("Internal Server Error!")
         })
-    }
+     }
 
       keywords:any='';
    search(){
@@ -41,7 +46,6 @@ export class StudentComponent {
     })
    }
 
-   
    limit:number=0;
    page:number=0;
 
@@ -57,8 +61,8 @@ export class StudentComponent {
     delete(id:number){
       if(confirm("Are you sure to delete?")==true){
          this._studentid.deleteStudent(id).subscribe((data:any)=>{
-     alert("record dleted successfully");
-      //  this.loadStudents();
+     alert("record deleted successfully");
+       this.loadStudents();
     },(err:any)=>{
       alert("Internal Server Error!")
     })

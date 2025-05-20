@@ -1,0 +1,66 @@
+<h1>Accounts Info:</h1><br>
+
+<input style="display: inline-block; margin: 3px ;" type="text" placeholder="Search Accounts"  [(ngModel)]="keywords" (keyup)="search()">
+
+<select style=" margin: 3px ;" [(ngModel)]="column">
+    <option value="account_name">Account Name</option>
+    <option value="account_number">Account Number</option>
+    <option value="available_balance">Available Balance</option>
+    <option value="ifsc_code">IFSC code</option>
+</select >
+
+<select style=" margin: 3px ;" [(ngModel)]="order">
+    <option value="asc">Ascending Order</option>
+    <option value="desc">Descending Order</option>
+    
+</select>
+
+ <button class="btn btn-primary" (click)="sort()">sort</button> 
+
+ <select style=" margin: 3px ;" [(ngModel)]="limit">
+    <option value="5">5</option>
+    <option value="10">10 </option>
+    <option value="25">25 </option>
+    <option value="50"> 50</option>
+</select >
+
+<select style=" margin: 3px ;" [(ngModel)]="page">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    
+</select>
+
+ <button class="btn btn-primary" (click)="paginate()">page</button> 
+ <button class="btn btn-warning" routerLink="/dashboard/create-account">Create Account</button> 
+
+<table class="table table-dark table-striped">
+    <thead>
+        <tr>
+            <th>S.no</th>
+            <th>Account Name</th>
+            <th>Acccount number</th>
+            <th>Available Balance</th>
+            <th>City</th>
+            <th>IFSC code</th>
+            <th>Profile pic</th>
+            <th>Actions</th>
+        </tr>
+           </thead>
+        <tbody>
+            <tr  *ngFor="let x of accounts;let i=index">
+                <td>{{i+1}}</td>
+                <td>{{x.account_name}}</td>
+                <td>{{x.account_number}}</td>
+                <td>{{x.available_balance}}</td>
+                <td>{{x.city}}</td>
+                <td>{{x.ifsc_code}}</td>
+                <td ><img class="profile_pic" src="{{x.profie_picture}}" alt="profile-pic"></td>
+                <td><button class="btn btn-danger" (click)="delete(x.id)">Delete</button></td>
+            </tr>
+              
+        </tbody>
+ 
+</table>

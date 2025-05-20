@@ -1,33 +1,45 @@
-<h1>Create Vehicle</h1>
+<div class="parent">
+    <div class="container-fluid">
+
+        <!-- <h1>{{id? 'Edit Vehicle':'Create Vehicle'}}</h1> -->
+
+      <h1 *ngIf="!id">Create Vehicle</h1>
+        <h1 *ngIf="id">Edit Vehicle</h1>
+<h6>------------------------------------------------------- </h6>
 
 <form [formGroup]="vehicleForm">
 <label >Vehicle Name:</label>
-<input type="text" formControlName="Vehicle"><br>
+<input type="text" formControlName="Vehicle"><br><br>
 
 <label >Vehicle Color</label>
-<input type="text" formControlName="color"><br>
+<input type="text" formControlName="color"><br><br>
 
 <label >Vehicle Cost:</label>
-<input type="text" formControlName="cost"><br>
+<input type="text" formControlName="cost"><br><br>
 
 <label >Vehicle Fuel:</label>
-<input type="text" formControlName="fuel"><br>
+<input type="text" formControlName="fuel"><br><br>
 
 <label >Vehicle Manufacturer:</label>
-<input type="text" formControlName="manufacturer"><br>
+<input type="text" formControlName="manufacturer"><br><br>
 
 <label >Vehicle Image :</label>
-<input type="text" formControlName="image"><br>
+<input type="text" formControlName="image"><br><br>
 
 <label >Vehicle Model:</label>
-<input type="text" formControlName="model"><br>
+<input type="text" formControlName="model"><br><br>
 
 <label >Vehicle Type:</label>
-<input type="text" formControlName="type"><br>
+<input type="text" formControlName="type"><br><br>
 
 <label >Vehicle Tyres:</label>
-<input type="text" formControlName="tyres"><br>
+<input type="text" formControlName="tyres"><br><br>
 
 <button class="btn btn-primary" (click)="submit()">submit</button>
 
 </form>
+
+
+</div></div>
+
+

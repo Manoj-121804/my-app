@@ -8,9 +8,10 @@
     background-color: grey;
 }
 
+
  .container-fluid{
     height: 95%;
     width: 45%;
-    background-color: rgba(0, 255, 106, 0.329);
+    background-color: blueviolet;
     overflow: auto;
  }

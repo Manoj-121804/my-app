@@ -24,6 +24,14 @@ import { WeatherappComponent } from './weatherapp/weatherapp.component';
 import { PininterestComponent } from './pininterest/pininterest.component';
 import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
 import { StudentComponent } from './student/student.component';
+import { CreatestudentComponent } from './createstudent/createstudent.component';
+import { CreateUserComponent } from './create-user/create-user.component';
+import { StudentReactiveFormComponent } from './student-reactive-form/student-reactive-form.component';
+import { AccountsComponent } from './accounts/accounts.component';
+import { CreateAccountComponent } from './create-account/create-account.component';
+import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
+import { StudentDetailsComponent } from './student-details/student-details.component';
+
 
 
 @NgModule({
@@ -47,7 +55,15 @@ import { StudentComponent } from './student/student.component';
     WeatherappComponent,
     PininterestComponent,
     CreateVehicleComponent,
-    StudentComponent
+    StudentComponent,
+    CreatestudentComponent,
+    CreateUserComponent,
+    StudentReactiveFormComponent,
+    AccountsComponent,
+    CreateAccountComponent,
+    VehicleDetailsComponent,
+    StudentDetailsComponent,
+    
   ],
   imports: [
     BrowserModule,

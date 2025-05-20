@@ -1,0 +1,123 @@
+<div class="parent">
+    <div class="container-fluid">
+
+        <form [formGroup]="studentForm">
+    <label>Name:</label>
+    <input type="text" formControlName="name"><br><br>
+    <div *ngIf="studentForm.get('name')?.touched && studentForm.get('name')?.invalid">
+     <p *ngIf="studentForm.get('name')?.errors?.['required']" >* Name Should Be Required</p>
+     <p *ngIf="studentForm.get('name')?.errors?.['minlength']">Name Should Be Minimum 5 Letters</p>
+     <p *ngIf="studentForm.get('name')?.errors?.['maxlength']">Name Should Be Maximum 15 Letters</p>
+  </div>
+
+
+    <label>Class:</label>
+    <input type="number"  formControlName="class"><br><br>
+    <div *ngIf="studentForm.get('class')?.touched && studentForm.get('class')?.invalid">
+     <p *ngIf="studentForm.get('class')?.errors?.['required']" >* Class Should Be Required</p>
+     <p *ngIf="studentForm.get('class')?.errors?.['min']">Class Should Be Minimum of  1 <sup>st</sup> class</p>
+     <p *ngIf="studentForm.get('class')?.errors?.['max']">Class Should Be Maximum of  10<sup>th</sup> class only</p>
+  </div>
+    
+    <label>Father Name:</label>
+    <input type="text"  formControlName="fatherName"><br><br>
+
+     <label>Mobile Number :</label>
+    <input type="number"  formControlName="mobileNumber"><br><br>
+     <div *ngIf="studentForm.get('mobileNumber')?.touched && studentForm.get('mobileNumber')?.invalid">
+     <p *ngIf="studentForm.get('mobileNumber')?.errors?.['required']" >* Mobile number Should Be Required</p>
+     <p *ngIf="studentForm.get('mobileNumber')?.errors?.['min']"> Mobile number Should Be of  10 Numbers only</p>
+     <p *ngIf="studentForm.get('mobileNumber')?.errors?.['max']"> Mobile number Should Be of  10 Numbers only</p>
+  </div>
+
+    <label>E-mail:</label>
+    <input type="email"  formControlName="email"><br><br>
+
+    <label>D.O.B:</label>
+    <input type="date"  formControlName="dob" ><br><br>
+
+   
+     <div formGroupName="address">
+      
+      <label>Address Line:</label>
+      <input type="text"  formControlName="addressLine"><br><br>
+
+      <label>City:</label>
+      <input type="text"  formControlName="city"><br><br>
+
+      <label>State:</label>
+      <input type="text"  formControlName="state"><br><br>
+
+      <label>Pincode:</label>
+      <input type="number"  formControlName="pincode"><br><br>
+       <div
+        *ngIf="studentForm.get('address')?.get('pincode')?.touched && studentForm.get('address')?.get('pincode')?.invalid">
+     <p *ngIf="studentForm.get('address')?.get('pincode')?.errors?.['required']" >* Pincode Should Be Required</p>
+    <p *ngIf="studentForm.get('address')?.get('pincode')?.errors?.['min']">Pincode Should Be > 599999  Numbers </p>
+     <p *ngIf="studentForm.get('address')?.get('pincode')?.errors?.['max']">Pincode Should Be < 599999  Numbers </p>
+     
+  </div>
+
+     </div>
+      
+     <label>Cards:</label>
+   <button class="btn btn-success" (click)="addCard()">Add Card</button><br>
+
+   <div formArrayName="cards">
+
+    <div *ngFor="let card of CardsFormArray.controls;let i=index">
+
+        <div formGroupName="{{i}}">
+
+            <h1>card{{i+1}}</h1>
+
+            <label for="">Class:</label>
+            <input type="number" formControlName="class"><br>
+
+            <label for="">Year:</label>
+            <input type="month" formControlName="year"><br>
+
+            <label for="">Percentage:</label>
+            <input type="number" formControlName="percentage"><br>
+     <div        
+         *ngIf=" CardsFormArray.controls[i].get('percentage')?.touched && CardsFormArray.controls[i].get('percentage')?.invalid">
+     <p *ngIf="CardsFormArray.controls[i].get('percentage')?.errors?.['required']" >* Percentage is Required</p>
+     <p *ngIf="CardsFormArray.controls[i].get('percentage')?.errors?.['min']">Percentage Should Be Minimum Zero(0%) Only</p>
+     <p *ngIf="CardsFormArray.controls[i].get('percentage')?.errors?.['max']">Percentage Should Be Maximum Hundred(100%) Only</p>
+  </div>
+          
+
+            <button class="btn btn-danger" (click)="deleteCard(i)">Delete</button>
+      
+           </div>
+            </div>
+             </div><br>
+
+
+             <label >Type:</label>
+   <input type="radio" name="type" formControlName="type"value="dayScholar">
+    <label >Day Scholar:</label>
+
+   <input type="radio" name="type" formControlName="type"value="residential">
+   <label >Residential</label><br>
+
+   <div *ngIf="studentForm.get('type')?.value=='dayScholar'">
+    <label>Bus Fee:</label>
+
+    <input type="number" formControlName="busFee">
+   </div>
+
+    <div *ngIf="studentForm.get('type')?.value=='residential'">
+
+    <label>Hostel Fee:</label>
+    <input type="number" formControlName="hostelFee">
+   </div>
+    
+     <button class="btn btn-primary" (click)="submit()">Submit</button>
+
+
+</form>
+
+    </div>
+</div>
+
