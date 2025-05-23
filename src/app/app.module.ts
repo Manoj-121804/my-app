@@ -31,6 +31,14 @@ import { AccountsComponent } from './accounts/accounts.component';
 import { CreateAccountComponent } from './create-account/create-account.component';
 import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
 import { StudentDetailsComponent } from './student-details/student-details.component';
+import { CommunicationComponent } from './communication/communication.component';
+import { ChildComponent } from './child/child.component';
+import { Sibling1Component } from './sibling1/sibling1.component';
+import { Sibling2Component } from './sibling2/sibling2.component';
+import { RatingComponent } from './rating/rating.component';
+import { TextAreaComponent } from './text-area/text-area.component';
+import { CapitalDirective } from './capital.directive';
+import { InrPipe } from './inr.pipe';
 
 
 
@@ -63,6 +71,14 @@ import { StudentDetailsComponent } from './student-details/student-details.compo
     CreateAccountComponent,
     VehicleDetailsComponent,
     StudentDetailsComponent,
+    CommunicationComponent,
+    ChildComponent,
+    Sibling1Component,
+    Sibling2Component,
+    RatingComponent,
+    TextAreaComponent,
+    CapitalDirective,
+    InrPipe,
     
   ],
   imports: [

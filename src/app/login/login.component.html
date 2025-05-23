@@ -1,8 +1,8 @@
 <form  [formGroup]="loginForm">
 
   <input  placeholder="Enter Your E-mail" class="input" formControlName="email" type="text"><br><br>
-  <input  placeholder="Enter Your Password" class="input" formControlName="password" type="password" >
-  <button (click)="passwordVisibility()">{{isVisible? 'hide':'show'}}  <i class="bi bi-eye-fill"></i></button><br><br>
+  <input  placeholder="Enter Your Password" class="input" formControlName="password" type="{{isVisible? 'text':'password'}}" >
+  <button (click)="passwordVisibility()">  <i class="{{isVisible? 'bi bi-eye-fill':'bi bi-eye-slash-fill'}}"></i></button><br><br>
 
 <button class="btn btn-info" (click)="login()">Login</button>
 

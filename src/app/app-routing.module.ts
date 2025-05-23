@@ -27,27 +27,43 @@ import { AuthenticationGuard } from './authentication.guard';
 import { CreateAccountComponent } from './create-account/create-account.component';
 import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
 import { StudentDetailsComponent } from './student-details/student-details.component';
+import { CommunicationComponent } from './communication/communication.component';
+import { Sibling1Component } from './sibling1/sibling1.component';
 
 const routes: Routes = [
   {path:'',component:LoginComponent},
   {path:'home',component:HomeComponent},
-  {path:'dashboard',component:DashboardComponent,canActivate:[AuthenticationGuard] ,children:[{path:'home',component:HomeComponent},
-    {path:'welcome',component:WelcomeComponent}, {path:'data-binding',component:DataBindingComponent},
-    {path:'calculator',component:CalculatorComponent},{path:'rectangle',component:RectangleComponent},
-    {path:'circle',component:CircleComponent},{path:'bmi',component:BMIComponent}
-    ,{path:'directives',component:DirectivesComponent},
-    {path:'employee',component:EmployeeComponent},{path:'vehicles',component:VehiclesComponent},
-    {path:'flipkart',component:FlipkartComponent},{path:'mail',component:MailComponent},
-    {path:'weatherapp',component:WeatherappComponent}, {path:'pininterest',component:PininterestComponent},
-    {path:'create-vehicle',component:CreateVehicleComponent},{path:'student',component:StudentComponent},
-    {path:'createstudent',component:CreatestudentComponent},{path:'edit-student/:id',component:CreatestudentComponent},
-    {path:'create-user',component:CreateUserComponent},
-    {path:'accounts',component:AccountsComponent}, {path:'student-reactive-form',component:StudentReactiveFormComponent},
-    {path:'create-account',component:CreateAccountComponent}, {path:'vehicle-details/:id',component:VehicleDetailsComponent},
-    {path:'student-details/:id',component:StudentDetailsComponent},{path:'edit-vehicle/:id',component:CreateVehicleComponent}
+  {path:'dashboard',component:DashboardComponent,canActivate:[AuthenticationGuard],
+    children:[{path:'home',component:HomeComponent,canActivate:[AuthenticationGuard]},
+    {path:'welcome',component:WelcomeComponent,canActivate:[AuthenticationGuard]},
+    {path:'data-binding',component:DataBindingComponent,canActivate:[AuthenticationGuard]},
+    {path:'calculator',component:CalculatorComponent,canActivate:[AuthenticationGuard]},
+    {path:'rectangle',component:RectangleComponent,canActivate:[AuthenticationGuard]},
+    {path:'circle',component:CircleComponent,canActivate:[AuthenticationGuard]},
+    {path:'bmi',component:BMIComponent,canActivate:[AuthenticationGuard]},
+    {path:'directives',component:DirectivesComponent,canActivate:[AuthenticationGuard]},
+    {path:'employee',component:EmployeeComponent,canActivate:[AuthenticationGuard]},
+    {path:'vehicles',component:VehiclesComponent,canActivate:[AuthenticationGuard]},
+    {path:'flipkart',component:FlipkartComponent,canActivate:[AuthenticationGuard]},
+    {path:'mail',component:MailComponent,canActivate:[AuthenticationGuard]},
+    {path:'weatherapp',component:WeatherappComponent,canActivate:[AuthenticationGuard]},
+    {path:'pininterest',component:PininterestComponent,canActivate:[AuthenticationGuard]},
+    {path:'create-vehicle',component:CreateVehicleComponent,canActivate:[AuthenticationGuard]},
+    {path:'student',component:StudentComponent,canActivate:[AuthenticationGuard]},
+    {path:'createstudent',component:CreatestudentComponent,canActivate:[AuthenticationGuard]},
+    {path:'edit-student/:id',component:CreatestudentComponent,canActivate:[AuthenticationGuard]},
+    {path:'create-user',component:CreateUserComponent,canActivate:[AuthenticationGuard]},
+    {path:'communication',component:CommunicationComponent,canActivate:[AuthenticationGuard]},
+    {path:'accounts',component:AccountsComponent,canActivate:[AuthenticationGuard]}, 
+    {path:'student-reactive-form',component:StudentReactiveFormComponent,canActivate:[AuthenticationGuard]},
+    {path:'create-account',component:CreateAccountComponent,canActivate:[AuthenticationGuard]},
+    {path:'vehicle-details/:id',component:VehicleDetailsComponent,canActivate:[AuthenticationGuard]},
+    {path:'student-details/:id',component:StudentDetailsComponent,canActivate:[AuthenticationGuard]},
+    {path:'edit-vehicle/:id',component:CreateVehicleComponent,canActivate:[AuthenticationGuard]},
+    {path:'sibling1',component:Sibling1Component,canActivate:[AuthenticationGuard]},
   ]}, 
   
-  {path:'**',component:ErrorComponent},
+  {path:'**',component:ErrorComponent,canActivate:[AuthenticationGuard]},
 ];
 
 @NgModule({

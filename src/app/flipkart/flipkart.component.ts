@@ -9,6 +9,7 @@ import { FlipkartService } from '../flipkart.service';
 export class FlipkartComponent {
 
   flipkart:any =[];
+Math: any;
   constructor(private _flipkartservice:FlipkartService){
     _flipkartservice.getCards().subscribe((data:any)=>{
       console.log(data);

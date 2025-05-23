@@ -1,0 +1,14 @@
+
+<!-- 
+
+ *ngIf="star==1">rating: {{star}}
+ *ngIf="star==2">rating: {{star}}
+ *ngIf="star==3">rating: {{star}}
+ *ngIf="star==4">rating: {{star}}
+ *ngIf="star==5">rating: {{star}} -->
+<!-- <h1>Rating:</h1> -->
+<img  *ngIf="(star==1)&&(star<=2)" src="/assets/images/star1.jpeg" alt="1 star">
+<img  *ngIf="(star>=2)&&(star<=3)" src="/assets/images/star2.jpeg" alt="2 star">
+<img  *ngIf="(star>3)&&(star<=4)" src="/assets/images/star3.jpeg" alt="3 star">
+<img  *ngIf="(star>4)&&(star<=5)" src="/assets/images/star4.jpeg" alt="4 star">
+<img  *ngIf="star==5" src="/assets/images/star5.jpeg" alt="5 star">
