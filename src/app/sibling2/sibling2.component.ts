@@ -7,7 +7,7 @@ import { CommonService } from '../common.service';
   styleUrls: ['./sibling2.component.css']
 })
 export class Sibling2Component {
-  count:number=0;
+  count:any='';
 
   constructor(private _commonService:CommonService){
 

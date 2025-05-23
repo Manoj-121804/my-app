@@ -17,7 +17,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DirectivesComponent } from './directives/directives.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { VehiclesComponent } from './vehicles/vehicles.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { FlipkartComponent } from './flipkart/flipkart.component';
 import { MailComponent } from './mail/mail.component';
 import { WeatherappComponent } from './weatherapp/weatherapp.component';
@@ -39,6 +39,7 @@ import { RatingComponent } from './rating/rating.component';
 import { TextAreaComponent } from './text-area/text-area.component';
 import { CapitalDirective } from './capital.directive';
 import { InrPipe } from './inr.pipe';
+import { TokenInterceptor } from './token.interceptor';
 
 
 
@@ -88,7 +89,11 @@ import { InrPipe } from './inr.pipe';
     HttpClientModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [{
+    provide:HTTP_INTERCEPTORS,
+    useClass:TokenInterceptor,
+    multi:true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

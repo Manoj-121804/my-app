@@ -8,7 +8,7 @@ import { CommonService } from '../common.service';
 })
 export class Sibling1Component {
  constructor(private _commonService:CommonService){}
-  count:number=0;
+  count:any='';
 
   submit(){
     this._commonService.countSubject.next(this.count)
