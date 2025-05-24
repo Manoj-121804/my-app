@@ -34,7 +34,7 @@ const routes: Routes = [
   {path:'',component:LoginComponent},
   {path:'home',component:HomeComponent},
   {path:'dashboard',component:DashboardComponent,canActivate:[AuthenticationGuard],
-    children:[{path:'home',component:HomeComponent,canActivate:[AuthenticationGuard]},
+    children:[{path:'',component:HomeComponent,canActivate:[AuthenticationGuard]},
     {path:'welcome',component:WelcomeComponent,canActivate:[AuthenticationGuard]},
     {path:'data-binding',component:DataBindingComponent,canActivate:[AuthenticationGuard]},
     {path:'calculator',component:CalculatorComponent,canActivate:[AuthenticationGuard]},
