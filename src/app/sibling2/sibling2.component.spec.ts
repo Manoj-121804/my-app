@@ -8,7 +8,8 @@ describe('Sibling2Component', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ Sibling2Component ]
+      declarations: [ Sibling2Component ],
+      
     })
     .compileComponents();
 

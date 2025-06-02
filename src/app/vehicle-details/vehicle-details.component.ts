@@ -17,14 +17,14 @@ export class VehicleDetailsComponent {
       this.id=data.id;
       console.log(this.id);
     },(err:any)=>{
-       alert("Internal Swerver Error!");
+       alert("Internal Server Error!");
     })
 
      _vehicleService.getVehicle(this.id).subscribe((data:any)=>{
       console.log(data);
       this.vehicle=data;
      },(err:any)=>{
-      alert("Internal Swerver Error!");
+      alert("Internal Server Error!");
      })
   }
    

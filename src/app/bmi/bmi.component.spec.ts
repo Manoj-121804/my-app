@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { FormsModule } from '@angular/forms';
 import { BMIComponent } from './bmi.component';
 
 describe('BMIComponent', () => {
@@ -8,7 +8,8 @@ describe('BMIComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BMIComponent ]
+      declarations: [ BMIComponent ],
+      imports: [FormsModule]
     })
     .compileComponents();
 

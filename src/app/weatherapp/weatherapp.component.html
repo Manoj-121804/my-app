@@ -1,23 +1,23 @@
 <div class="parent" >
     
    <h1 id="heading">Weather in Hyderabad</h1>
-   <div  [ngClass]="{'blue':weather.current_weather.temperature<0,
-   'yellow':(weather.current_weather.temperature>0) &&(weather.current_weather.temperature<30),
-   'green':(weather.current_weather.temperature>=30) &&(weather.current_weather.temperature<=35),
-   'red':weather.current_weather.temperature>35 }"  class="sun"></div>
+   <div  [ngClass]="{'blue':weather?.current_weather.temperature<0,
+   'yellow':(weather?.current_weather.temperature>0) &&(weather?.current_weather.temperature<30),
+   'green':(weather?.current_weather.temperature>=30) &&(weather?.current_weather.temperature<=35),
+   'red':weather?.current_weather.temperature>35 }"  class="sun"></div>
 
-   <h1 class="degree">{{weather.current_weather.temperature}} {{weather.current_weather_units.temperature}}</h1>
+   <h1 class="degree">{{weather?.current_weather.temperature}} {{weather?.current_weather_units.temperature}}</h1>
 
-   <h2>Wind Speed: {{weather.current_weather.windspeed}} {{weather.current_weather_units.windspeed}} </h2>
+   <h2>Wind Speed: {{weather?.current_weather.windspeed}} {{weather?.current_weather_units.windspeed}} </h2>
 
-   <h2 id="winddirection">Wind Direction: {{weather.current_weather.winddirection}}
-       {{weather.current_weather_units.winddirection}} (NE)</h2>
+   <h2 id="winddirection">Wind Direction: {{weather?.current_weather.winddirection}}
+       {{weather?.current_weather_units.winddirection}} (NE)</h2>
 
-   <h2 class="day" *ngIf="weather.current_weather.is_day==1">Daytime</h2>
-   <h2 class="night"  *ngIf="weather.current_weather.is_day==0">Nighttime</h2>
+   <h2 class="day" *ngIf="weather?.current_weather.is_day==1">Daytime</h2>
+   <h2 class="night"  *ngIf="weather?.current_weather.is_day==0">Nighttime</h2>
 
-   <h3>Date:{{weather.current_weather.time | date:'dd/MM/yyyy' }} </h3>
-   <h3>Time:{{weather.current_weather.time | date:'hh:mm' }}  </h3>
+   <h3>Date:{{weather?.current_weather.time | date:'dd/MM/yyyy' }} </h3>
+   <h3>Time:{{weather?.current_weather.time | date:'hh:mm' }}  </h3>
 
 
 </div>

@@ -7,7 +7,8 @@ import { WeatherappService } from '../weatherapp.service';
   styleUrls: ['./weatherapp.component.css']
 })
 export class WeatherappComponent {
-   weather:any=[];
+   weather:any={};
+  static weatherData: { temperature: number; };
   constructor(private _weatherapp:WeatherappService){
 
       _weatherapp.getWeather().subscribe((data:any)=>{
@@ -23,4 +24,9 @@ export class WeatherappComponent {
 
   }
 
+  ngOnInit() {
+  this._weatherapp.getWeather().subscribe(data => {
+    this.weather = data;
+  });
+}
 }

@@ -23,5 +23,8 @@ export class DirectivesComponent {
   ]
 
 today:any = new Date();
+  isVisible!: boolean;
+  items!: string[];
+  isActive!: boolean;
 
 }

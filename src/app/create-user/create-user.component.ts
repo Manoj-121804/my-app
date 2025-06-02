@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
-import { tcsMail } from 'validators';
+import { tcsMail } from 'src/app/validators';
 
 @Component({
   selector: 'app-create-user',

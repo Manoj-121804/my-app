@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { PininterestComponent } from './pininterest.component';
 
 describe('PininterestComponent', () => {
@@ -8,7 +8,8 @@ describe('PininterestComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PininterestComponent ]
+      declarations: [ PininterestComponent ],
+      imports: [HttpClientTestingModule]
     })
     .compileComponents();
 

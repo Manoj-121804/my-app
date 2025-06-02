@@ -29,6 +29,7 @@ import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.compo
 import { StudentDetailsComponent } from './student-details/student-details.component';
 import { CommunicationComponent } from './communication/communication.component';
 import { Sibling1Component } from './sibling1/sibling1.component';
+import { HooksComponent } from './hooks/hooks.component';
 
 const routes: Routes = [
   {path:'',component:LoginComponent},
@@ -61,6 +62,7 @@ const routes: Routes = [
     {path:'student-details/:id',component:StudentDetailsComponent,canActivate:[AuthenticationGuard]},
     {path:'edit-vehicle/:id',component:CreateVehicleComponent,canActivate:[AuthenticationGuard]},
     {path:'sibling1',component:Sibling1Component,canActivate:[AuthenticationGuard]},
+    {path:'hooks',component:HooksComponent,canActivate:[AuthenticationGuard]},
   ]}, 
  
     {

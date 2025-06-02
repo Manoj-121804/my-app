@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { AccountsComponent } from './accounts.component';
+import { FormsModule } from '@angular/forms';
+
 
 describe('AccountsComponent', () => {
   let component: AccountsComponent;
@@ -8,7 +10,8 @@ describe('AccountsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AccountsComponent ]
+      declarations: [ AccountsComponent ],
+        imports: [HttpClientTestingModule,FormsModule],
     })
     .compileComponents();
 
